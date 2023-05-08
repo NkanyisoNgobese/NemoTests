@@ -46,39 +46,49 @@ public class Main {
 
     @Test(priority = 0)
     public void LoginTest() throws InterruptedException {
+
+        //Logging_On
+        driver.findElement(By.id("username")).sendKeys("Nkanyiso111");
+        Thread.sleep(3000);
+        driver.findElement(By.cssSelector(".p-password-input")).sendKeys("Altron_2028");
+        Thread.sleep(3000);
+        driver.findElement(By.cssSelector(".p-button:nth-child(2)")).click();
+        Thread.sleep(7000);
+        //driver.findElement(By.cssSelector(".my-1 > .p-inputswitch-slider")).click();
+
+        driver.findElement(By.cssSelector("#pr_id_16_content_0 .p-inputswitch-slider")).click();
+        //Thread.sleep(5000);
+
+        driver.findElement(By.cssSelector("#pr_id_16_content_11 .p-inputswitch-slider")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.cssSelector(".p-1")).click();
+        Thread.sleep(5000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(7) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
         //Login
         Thread.sleep(2000);
 
-        driver.findElement(By.id("username")).click();
-        driver.findElement(By.id("username")).sendKeys("Nkanyiso111");
+        //driver.findElement(By.id("username")).click();
+        //driver.findElement(By.id("username")).sendKeys("Nkanyiso111");
 
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).click();
+        //driver.findElement(By.xpath("//span/div/input")).click();
 
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        //driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
 
         // . Click 'Login'
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//button[. = 'Login']")).click();
-        Thread.sleep(2000);
+       // Thread.sleep(3000);
+        //driver.findElement(By.xpath("//button[. = 'Login']")).click();
+       // Thread.sleep(3000);
 
-        // 7. Click 'IMG'
-        By by1 = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/div/div[1]/div[1]/img");
-        Thread.sleep(2000);
-        driver.findElement(by1).click();
-
-        // 8. Click 'LOGOFF'
-        Thread.sleep(2000);
-        by1 = By.xpath("//span[. = 'LOGOFF']");
-        driver.findElement(by1).click();
-
-        // 9. Click 'Yes2'
-        Thread.sleep(2000);
-        by1 = By.xpath("//button[. = 'Yes']");
-        driver.findElement(by1).click();
+       // driver.findElement(By.cssSelector(".p-1")).click();
+        //Thread.sleep(1000);
+       //driver.findElement(By.cssSelector(".p-menuitem:nth-child(7) .p-menuitem-text:nth-child(2)")).click();
+       // driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
     }
 
     @Test(priority = 1)
@@ -95,7 +105,7 @@ public class Main {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
 
         // . Click 'Login'
         Thread.sleep(2000);
@@ -163,7 +173,7 @@ public class Main {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
 
         // . Click 'Login'
         Thread.sleep(2000);
@@ -208,146 +218,64 @@ public class Main {
     @Test(priority = 3)
     public void Notices() throws InterruptedException {
 
-
-        //Login
-        Thread.sleep(2000);
-
         driver.findElement(By.id("username")).click();
+        Thread.sleep(1500);
         driver.findElement(By.id("username")).sendKeys("Nkanyiso111");
-
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".p-password-input")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".p-password-input")).sendKeys("Altron_2028");
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".p-button:nth-child(2)")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.linkText("Administration")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.linkText("System")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.linkText("System")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.linkText("Notices")).click();
         Thread.sleep(2000);
-
-        driver.findElement(By.xpath("//span/div/input")).click();
-
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(2) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.name("subject")).click();
+        Thread.sleep(3000);
+        driver.findElement(By.name("subject")).sendKeys("Testing");
+        Thread.sleep(1500);
+        driver.findElement(By.name("message")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.name("message")).sendKeys("Adding New Notice , Nemo deployment inplace");
         Thread.sleep(2000);
-
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
-
-        // . Click 'Login'
+        driver.findElement(By.cssSelector(".cardPanel .p-button:nth-child(1)")).click();
+        Thread.sleep(20000);
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//button[. = 'Login']")).click();
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(6) .p-menuitem-text:nth-child(2)")).click();
         Thread.sleep(2000);
-
-        // 9. ClickAdministration1'
-        By by;
-        by = By.xpath("//a[. = 'Administration']");
-        Thread.sleep(1000);
-        driver.findElement(by).click();
-
-        // 10. Click 'System'
-        by = By.xpath("//li[2]/ul//a[. = 'System']");
-        Thread.sleep(1000);
-        driver.findElement(by).click();
-
-
-        // 11. Click 'System
-        Thread.sleep(1000);
-        by = By.xpath("//li[2]/ul//a[. = 'System']");
-        driver.findElement(by).click();
-
-        // 12. Click 'Notices'
-        Thread.sleep(1000);
-        by = By.xpath("//a[. = 'Notices']");
-        driver.findElement(by).click();
-
-        //Adding NEW Notices
-        Thread.sleep(1000);
-        by = By.xpath("//*[@id=\"pr_id_20_content_1\"]/div/div[1]/div[3]/button[2]/span[1]");
-        driver.findElement(by).click();
-
-        //Selecting Add New
-        Thread.sleep(1000);
-        by = By.xpath("/html/body/div[3]/ul/li[2]/a/span[2]");
-        driver.findElement(by).click();
-
-        // Click 'subject'
-        Thread.sleep(1000);
-        by = By.cssSelector("[name='subject']");
-        driver.findElement(by).click();
-
-
-        // 27. Type 'Nkanyiso' in 'subject'
-        Thread.sleep(1000);
-        by = By.cssSelector("[name='subject']");
-        driver.findElement(by).sendKeys("Nkanyiso");
-
-        // 28. Click 'message'
-        Thread.sleep(1000);
-        by = By.cssSelector("[name='message']");
-        driver.findElement(by).click();
-
-        // 29. Type 'Test Automation' in 'message'
-        Thread.sleep(1000);
-        by = By.cssSelector("[name='message']");
-        driver.findElement(by).sendKeys("Test Automation");
-
-        //Add Button
-        Thread.sleep(1000);
-        by = By.xpath("//*[@id=\"pr_id_20_content_1\"]/form/div/div[1]/div/div/button[1]");
-        driver.findElement(by).click();
-
-        //Menu
-        Thread.sleep(1000);
-        by = By.xpath("//*[@id=\"pr_id_20_content_1\"]/div/div[1]/div[3]/button[2]/span[1]");
-        driver.findElement(by).click();
-
-        //Refresh Data
-        Thread.sleep(1000);
-        by = By.xpath("/html/body/div[3]/ul/li[4]/a/span[2]");
-        driver.findElement(by).click();
-
-        //Menu again
-        Thread.sleep(1000);
-        by = By.xpath("//*[@id=\"pr_id_20_content_1\"]/div/div[1]/div[3]/button[2]/span[1]");
-        driver.findElement(by).click();
-
-        //Export_XLS
-        Thread.sleep(5000);
-        by = By.xpath("/html/body/div[3]/ul/li[6]/a/span[2]");
-        driver.findElement(by).click();
-
-        //Menu again
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
         Thread.sleep(2000);
-        by = By.xpath("//*[@id=\"pr_id_20_content_1\"]/div/div[1]/div[3]/button[2]/span[1]");
-        driver.findElement(by).click();
-
-        //Export_PDF
-        Thread.sleep(4000);
-        by = By.xpath("/html/body/div[3]/ul/li[7]/a/span[2]");
-        driver.findElement(by).click();
-
-        //Confirmation
-        //Export_PDF
-        Thread.sleep(1000);
-        by = By.xpath("//*[@id=\"pr_id_37\"]/div[3]/button[2]/span[1]");
-        driver.findElement(by).click();
-
-        //Right Click
-        Thread.sleep(1000);
-        //Actions actions = new Actions(driver);
-        //WebElement elementLocator = driver.findElement(By.xpath("/html/body/div[3]"));
-        //actions.contextClick(elementLocator).perform();
-
-        //Selecting Delete
-        //Thread.sleep(1000);
-        //by = By.xpath("/html/body/div[3]/ul/li[4]/a/span[2]");
-        //driver.findElement(by).click();
-
-        // 7. Click 'IMG'
-        By by1 = By.xpath("//*[@id=\"__next\"]/div[1]/div[1]/div/div[1]/div[1]/img");
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(7) .p-menuitem-text:nth-child(2)")).click();
         Thread.sleep(2000);
-        driver.findElement(by1).click();
-
-
-        // 8. Click 'LOGOFF'
+        driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
         Thread.sleep(2000);
-        by1 = By.xpath("//span[. = 'LOGOFF']");
-        driver.findElement(by1).click();
-
-        // 9. Click 'Yes2'
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
         Thread.sleep(2000);
-        by1 = By.xpath("//button[. = 'Yes']");
-        driver.findElement(by1).click();
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(4) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-selectable-row:nth-child(1) > td:nth-child(1) > .vw20")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".pi-user")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(3) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".p-component-overlay")).click();
+        driver.findElement(By.cssSelector(".p-1")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.linkText("LOGOFF")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
     }
 
     @Test(priority = 4)
@@ -366,7 +294,7 @@ public class Main {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
 
         // . Click 'Login'
         Thread.sleep(2000);
@@ -456,7 +384,7 @@ public class Main {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
 
         // . Click 'Login'
         Thread.sleep(2000);
@@ -484,25 +412,25 @@ public class Main {
         driver.findElement(By.xpath("//input[@name=\'description\']")).sendKeys("Nkanyiso");
         Thread.sleep(2000);
         driver.findElement(By.cssSelector(".cardPanel .p-button:nth-child(1)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector(".p-menuitem:nth-child(4) .p-menuitem-text:nth-child(2)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-filter-column:nth-child(3) > .p-inputtext")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-selectable-row:nth-child(2) > td:nth-child(3) > .vw20")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector(".p-menuitem:nth-child(3) .p-menuitem-text:nth-child(2)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         driver.findElement(By.cssSelector(".p-menuitem:nth-child(6) .p-menuitem-text:nth-child(2)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         driver.findElement(By.cssSelector(".p-menuitem:nth-child(7) .p-menuitem-text:nth-child(2)")).click();
         Thread.sleep(2000);
         driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
@@ -530,7 +458,7 @@ public class Main {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
 
         // . Click 'Login'
         Thread.sleep(2000);
@@ -628,7 +556,7 @@ public class Main {
         driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
     }
 
-    @Test(priority = 6)
+    @Test(priority = 7)
     public void CourtAttandance() throws InterruptedException {
 
 
@@ -644,7 +572,7 @@ public class Main {
 
         Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2027");
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
 
         // . Click 'Login'
         Thread.sleep(2000);
@@ -757,6 +685,79 @@ public class Main {
         Thread.sleep(2000);
         driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
     }
+
+    @Test(priority = 8)
+    public void CloneHandset() throws InterruptedException {
+        //Login
+        Thread.sleep(2000);
+
+        driver.findElement(By.id("username")).click();
+        driver.findElement(By.id("username")).sendKeys("Nkanyiso111");
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//span/div/input")).click();
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("//span/div/input")).sendKeys("Altron_2028");
+
+        // . Click 'Login'
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[. = 'Login']")).click();
+        Thread.sleep(2000);
+
+        // 9. ClickAdministration1'
+        By by;
+        by = By.xpath("//a[. = 'Administration']");
+        Thread.sleep(1000);
+        driver.findElement(by).click();
+
+        // 10. Click 'System'
+        by = By.xpath("//li[2]/ul//a[. = 'System']");
+        Thread.sleep(1000);
+        driver.findElement(by).click();
+
+
+        // 11. Click 'System
+        Thread.sleep(1000);
+        by = By.xpath("//li[2]/ul//a[. = 'System']");
+        driver.findElement(by).click();
+        Thread.sleep(1000);
+        driver.findElement(By.linkText("Cloned Handset")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(6) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(7) .p-menuitem-text:nth-child(2)")).click();
+        driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(2) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.name("IMEI")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.name("IMEI")).sendKeys("35134500224209");
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".cardPanel .p-button:nth-child(1)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector("#pr_id_20_content_1 .p-button:nth-child(4)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(4) .p-menuitem-text:nth-child(2)")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-tabview-selected .pi")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-1")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.cssSelector(".p-menuitem:nth-child(7) .p-menuitem-text:nth-child(2)")).click();
+        driver.findElement(By.cssSelector(".p-confirm-dialog-accept")).click();
+    }
+
+
 
     @AfterClass
     static void tearDown() {
